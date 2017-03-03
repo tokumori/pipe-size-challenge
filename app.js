@@ -8,7 +8,7 @@ function minPipeSize (rateArray) {
     let valveSizes = [15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100]
     for (let i = 0; i < rateArray.length; i++) {
       if (typeof rateArray[i] !== 'number') {
-        return console.log('Please enter numbers only.');
+        throw new TypeError('Please enter numbers only.');
       }
       let rate = rateArray[i];
       let minPipeSize = (1.732 * 12.9 * 200 * rate)/ (208 * tolerance);
@@ -28,9 +28,9 @@ function minPipeSize (rateArray) {
         sizeArray.push(pipeSize);
       }
     }
-    return console.log(sizeArray);
+    return sizeArray;
   }
-  return console.log('Please enter an array with only two numbers.');
+  throw new TypeError('Please enter an array with only two numbers.');
 }
 
 minPipeSize([16.45, 18.9]);
