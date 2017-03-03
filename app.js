@@ -14,16 +14,24 @@ function minPipeSize (rateArray) {
     let tolerance = 2/100;
     let minPipeSizeX = (1.732 * 12.9 * 200 * rateX)/ (208 * tolerance);
     let minValveSizeX = rateX * 1.25 * 1.25;
+    let minPipeSizeY = (1.732 * 12.9 * 200 * 18.9)/ (208 * tolerance);
+    let minValveSizeY = rateY * 1.25 * 1.25;
     // tried to do for loop, but reduce was faster to code.
     // might change after completing challenge.
     let pipeSizeX = pipeSizes.reduce((accumulator, currentVal) => {
       return accumulator > minPipeSizeX ? accumulator : currentVal;
-    })
+    });
     let valveSizeX = valveSizes.reduce((accumulator, currentVal) => {
       return accumulator > minValveSizeX ? accumulator : currentVal;
-    })
-    sizeArray.push(pipeSizeX, valveSizeX);
-    return console.log(sizeArray);
+    });
+    let pipeSizeY = pipeSizes.reduce((accumulator, currentVal) => {
+      return accumulator > minPipeSizeY ? accumulator : currentVal;
+    });
+    let valveSizeY = valveSizes.reduce((accumulator, currentVal) => {
+      return accumulator > minValveSizeY ? accumulator : currentVal;
+    });
+    sizeArray.push(pipeSizeX, valveSizeX, pipeSizeY, valveSizeY);
+    return console.log(minPipeSizeX, minPipeSizeY);
   }
   return console.log('Please enter an array with only two numbers.');
 }
