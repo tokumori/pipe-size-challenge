@@ -16,3 +16,4 @@ Create a function that takes in `[rateX, rateY]` and returns `[pipeSizeX, valveS
 
 ## Goal 2
 Write a program that dynamically draws a diagram with the returned values.
+![Pipe Diagram](./diagram.png)
