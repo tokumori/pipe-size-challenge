@@ -28,11 +28,6 @@ function minPipeSize (rateArray) {
         sizeArray.push(pipeSize);
       }
     }
-    // let minPipeSizeZ = (1.732 * 12.9 * 200 * rateZ)/ (208 * tolerance);
-    // let pipeSizeZ = pipeSizes.reduce((accumulator, currentVal) => {
-    //     return accumulator > minPipeSizeZ ? accumulator : currentVal;
-    // });
-    // sizeArray.push(pipeSizeZ);
     return console.log(sizeArray);
   }
   return console.log('Please enter an array with only two numbers.');
