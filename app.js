@@ -18,9 +18,8 @@ function minPipeSize (rateArray) {
     // tried to do for loop, but reduce was faster to code.
     // might change after completing challenge.
     let pipeSizeX = pipeSizes.reduce((accumulator, currentVal) => {
-      return currentVal > minPipeSizeX ? accumulator : currentVal;
+      return accumulator > minPipeSizeX ? accumulator : currentVal;
     })
-    sizeArray.push(minPipeSizeX);
     return console.log(pipeSizeX);
   }
   return console.log('Please enter an array with only two numbers.');
