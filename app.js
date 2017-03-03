@@ -14,7 +14,7 @@ function minPipeSize (rateArray) {
     let tolerance = 2/100;
     let minPipeSizeX = (1.732 * 12.9 * 200 * rateX)/ (208 * tolerance);
     let minValveSizeX = rateX * 1.25 * 1.25;
-    let minPipeSizeY = (1.732 * 12.9 * 200 * 18.9)/ (208 * tolerance);
+    let minPipeSizeY = (1.732 * 12.9 * 200 * rateY)/ (208 * tolerance);
     let minValveSizeY = rateY * 1.25 * 1.25;
     // tried to do for loop, but reduce was faster to code.
     // might change after completing challenge.
