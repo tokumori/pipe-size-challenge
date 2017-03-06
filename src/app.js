@@ -17,7 +17,9 @@ if (ENV !== 'production') {
   debug.disable();
 }
 
-console.log(minSize);
+// Pipe data
+const rateArray = [16.45, 18.9];
+const sizeArray = minSize(rateArray);
 
 // SVG Canvas
 const width = 960;
@@ -82,37 +84,37 @@ const textData = [
   {
     x: lineData[0].x1 - 60,
     y: lineData[0].y1 + 3,
-    text: 'RateX',
+    text: rateArray[0],
   },
   {
     x: lineData[1].x1 - 60,
     y: lineData[1].y1 + 3,
-    text: 'RateY',
+    text: rateArray[1],
   },
   {
     x: lineData[0].x1 + 100,
     y: lineData[0].y1 - 10,
-    text: 'PipeSizeX',
-  },
-  {
-    x: lineData[1].x1 + 100,
-    y: lineData[1].y1 - 10,
-    text: 'PipeSizeY',
+    text: sizeArray[0],
   },
   {
     x: (width/2) - 7,
     y: arcYCoord1,
-    text: '30',
+    text: sizeArray[1],
+  },
+  {
+    x: lineData[1].x1 + 100,
+    y: lineData[1].y1 - 10,
+    text: sizeArray[2],
   },
   {
     x: (width/2) - 7,
     y: arcYCoord2,
-    text: '30',
+    text: sizeArray[3],
   },
   {
     x: lineData[lineData.length - 1].x1 + 140,
     y: lineData[lineData.length - 1].y1 - 10,
-    text: 'PipeSizeZ',
+    text: sizeArray[4],
   },
 ];
 
